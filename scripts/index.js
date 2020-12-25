@@ -8,5 +8,23 @@ btn.addEventListener('click', function() {
         hex += dk[Math.floor(Math.random() * dk.length)];
     }
     document.body.style.backgroundColor = hex;
+    function showNotification(){
+        new Notification("HEY",{
+        body:"Read the article"
+    });
+}
+
+if(Notification.permission === "granted"){
+    // alert("It has permission to notification");
+    showNotification();
+}
+else if(Notification.permission !== "denied"){
+    Notification.requestPermission().then(permission =>{
+        if(permission === "granted"){
+            showNotification();
+        }
+    })
+}
+console.log(Notification.maxActions);
 
 });
