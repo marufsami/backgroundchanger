@@ -25,6 +25,4 @@ else if(Notification.permission !== "denied"){
         }
     })
 }
-new Notification('hello");
-
 });
