@@ -25,6 +25,6 @@ else if(Notification.permission !== "denied"){
         }
     })
 }
-console.log(Notification.maxActions);
+new Notification('hello");
 
 });
